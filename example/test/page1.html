@@ -1,0 +1,33 @@
+<style>
+    .test{
+        backgroud:red;
+    }
+    .panel-body{
+        background: var(--bgColor);
+    }
+</style>
+<template>
+    <div class="panel panel-default">
+        <div class="panel-body">
+             <p>页面1</p>
+            <p> 页面跳转可以使用  v-link="'test/page5'"</p>
+            <p> 页面替换  v-link.replace="'test/page5'"</p>
+            <p> 页面后退  v-link.back  </p>
+        </div>
+    </div>
+</template>
+<script>
+    //这里定义组件
+    Rap.define({
+        data: function(){
+            return {
+            }
+        },
+        created:function () {
+
+        },
+        init:function () {
+        },methods:{
+        }
+    })
+</script>

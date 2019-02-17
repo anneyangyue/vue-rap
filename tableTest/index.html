@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-Equiv="Cache-Control" Content="no-cache" />
+    <meta http-Equiv="Pragma" Content="no-cache" />
+    <meta http-Equiv="Expires" Content="0" />
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+</head>
+<style>
+    [v-cloak] {
+        display: none;
+    }
+</style>
+<body>
+
+<div id="app" v-cloak >
+  <component v-bind:is="childView">
+  </component>
+  
+</div>
+</body>
+<!--引用 vue-rap文件-->
+<script src="../rap.1.0.1.js"></script>
+
+<style >
+    :root{
+        --bgColor:#fff;
+        
+    }
+</style>
+<script>
+  //代码写在onload里防止阻塞页面渲染
+  window.onload=function() {
+      Rap.config({
+          debug:true,
+          default_page:"default",
+          app_version:'1',
+          css:['antd.min.css'],
+          script:[
+              "vue.2.5.13.js",
+              "antd.min.js"
+          ]
+      });
+      Rap.app({
+          el: '#app'
+      });
+  }
+</script>
+
+</html>

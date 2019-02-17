@@ -1,0 +1,28 @@
+<style>
+    .test{
+        backgroud:red;
+    }
+</style>
+<template>
+    <div>
+            <button class="btn btn-default" v-link.replace="'test/page3'"  :class="{'btn-success':router.page=='test/page3'}">Tab(页面3)</button>
+            <button class="btn btn-default" v-link.replace="'test/page4'"  :class="{'btn-success':router.page=='test/page4'}">Tab(页面4)</button>
+            <component v-bind:is="childView">
+            </component>
+    </div>
+</template>
+<script>
+    //这里定义组件
+    Rap.define({
+        data: function(){
+            return {
+            }
+        },
+        created:function () {
+
+        },
+        init:function () {
+        },methods:{
+        }
+    })
+</script>
